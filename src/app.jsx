@@ -1,15 +1,21 @@
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
+import AbilityScores from './components/AbilityScores.js';
+import Stats from './components/Stats.js';
 
-class Builder extends Component {
+class Sheet extends Component {
   render() {
     return (
       <div>
-        <script>alert();</script>
+        <div className="top">
+          <Stats />
+        </div>
+        <div className="bottom">
+          <AbilityScores />
+        </div>
       </div>
-
       );
   }
 }
 
-ReactDOM.render(<Builder />, document.querySelector('.app'));
+ReactDOM.render(<Sheet />, document.querySelector('.app'));
