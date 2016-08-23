@@ -1,0 +1,23 @@
+{
+  "name": "Adohand",
+  "classes": {"Champion": 4},
+  "race": "Half-Orc",
+  "scores": {
+    "str": {
+      "base": 16,
+      "increase": 2
+    },
+    "dex": 14,
+    "con": 12,
+    "wis": 18,
+    "int": 13,
+    "cha": 12
+  },
+  "stats": {
+    "hp": {
+      "max-hp": 48,
+      "current-hp": 48
+    },
+    "ac": 18
+  }
+}

@@ -4,6 +4,25 @@ import AbilityScores from './components/AbilityScores.js';
 import Stats from './components/Stats.js';
 
 class Sheet extends Component {
+
+  constructor(props) {
+    super(props);
+    this.getCharacter = this.getCharacter.bind(this);
+    this.state = {character: null};
+  }
+
+  componentWillMount() {
+    this.state = { character: this.getCharacter() };
+  }
+
+  getCharacter() {
+    return fetch('/adohand.json').then(result => {
+      return result.json().then((d) => { 
+        return d;
+      });
+    })
+  }
+
   render() {
     return (
       <div>
@@ -11,7 +30,7 @@ class Sheet extends Component {
           <Stats />
         </div>
         <div className="bottom">
-          <AbilityScores />
+          <AbilityScores scores={this.state.character} />
         </div>
       </div>
       );
